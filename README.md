@@ -50,7 +50,7 @@ Lecionado por Mayk Brito, o curso mostra os fundamentos do CSS e seus conceitos 
 
 ## 📝 Notas de aula
 
-Anotações das aulas estão disponíveis em breve.
+Anotações das aulas estão disponíveis <a href="https://github.com/angelicaalbuquerque/guia-de-css_rocketseat/blob/main/Notes.md">aqui</a>.
 
 ## 📬 Entre em contato!
 
