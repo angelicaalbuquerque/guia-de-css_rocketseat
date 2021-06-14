@@ -22,6 +22,29 @@ h1 {
 
 ### Comentários
 
+Os comentários em CSS não irão afetar seu código, muito pelo contrário: irão ajudar a lembrar blocos de códigos.
+
+Os comentários também ajudam com dicas para leitura, facilitando que outros desenvolvedores entendam seu código.
+
+Agora, nunca nunca esqueça de fechar um comentário. Eles começam com `/*` e terminam com `*/`.
+
+```CSS
+/* Seção Básica */
+h1 {
+  color: blue;
+}
+```
+
+Comentários também servem para desabilitar parte do código, como:
+
+```CSS
+/*
+  .h1 {
+    color: blue;
+  }
+*/
+```
+
 ### Anatomia
 
 ### Seletores
