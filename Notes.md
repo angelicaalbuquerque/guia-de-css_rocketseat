@@ -39,13 +39,30 @@ Comentários também servem para desabilitar parte do código, como:
 
 ```CSS
 /*
-  .h1 {
+  h1 {
     color: blue;
   }
 */
 ```
 
 ### Anatomia
+
+A conexão do HTML com CSS funciona da seguinte maneira:
+
+Entre chaves, o elemento `h1` tem a declaração CSS com sua propriedade (`color`, por exemplo), valor (`blue`, por exemplo) e `;` para fechar essa ideia.
+
+```CSS
+  h1 {
+    color: blue;
+    font-size: 60px;
+    background: gray;
+  }
+```
+
+- Selector: Nesse caso, todas as tags `h1`.
+- Declaration: Tudo que está entre chaves (inclusive as chaves).
+- Properties: Nesse caso, `color`, `font-size` e `background`.
+- Property Value: Nesse caso, `blue`, `60px` e `gray`.
 
 ### Seletores
 
