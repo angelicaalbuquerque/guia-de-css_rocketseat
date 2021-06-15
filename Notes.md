@@ -66,6 +66,19 @@ Entre chaves, o elemento `h1` tem a declaração CSS com sua propriedade (`color
 
 ### Seletores
 
+Os seletores HTML servem para conectar um elemento HTML com o CSS.
+
+Alguns tipos:
+
+- Global selector: `*`;
+- Element/Type Selector: `h1, h2, p, div...`;
+- ID Selector: `#box, #container`;
+- Class Selector: `.red, .m-4`;
+- Attribute selector;
+- Pseudo-class;
+- Pseudo-elements;
+- Outros.
+
 ### Box model
 
 ### Origem do CSS
