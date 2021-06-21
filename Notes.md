@@ -81,7 +81,84 @@ Alguns tipos:
 
 ### Box model
 
+O CSS trabalha com um conceito de caixas, que são os box models.
+
+Toda caixa tem seus limites, com altura e largura. Toda caixa tem um conteúdo e espaços dentro dela, e espaços entre elas.
+
+Quase tudo no são caixas no CSS. Posicionamento, tamanhos, espaçamentos, bordas, cores... Caixas podem ficar ao lado uma da outra, acima, abaixo...
+
+Elementos HTML são caixas. É como se observasse cada um dos elementos do HTML e a comunicação com CSS fosse feita em caixas.
+
+**Analise seus layouts como caixa para começar a entender como os elementos devem ser posicionados, como deve ser a aplicação no CSS.**
+
 ### Origem do CSS
+
+Existem 4 formar de adicionar um estilo CSS num HTML. São elas:
+
+#### inline
+
+Utilizando o atributo `style`.
+
+```HTML
+<body>
+  <h1 style="color: red">Título</h1>
+</body>
+```
+
+#### `<style>`
+
+Tag HTML que irá conter o CSS.
+
+```HTML
+<head>
+  <style>
+    h1 {
+      color: red;
+    }
+
+    strong {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Título <strong>Principal</strong></h1>
+</body>
+```
+
+#### `<link>`
+
+Arquivo CSS externo. Uma das melhores práticas, pois se separara muito bem HTML e CSS.
+
+```HTML
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+```
+
+_Crio o arquivo `style.css` para os estilos._
+
+#### `@import`
+
+Arquivo CSS externo. Por exemplo, pode ser aplicado por link no HTML ou dentro da tag `style` no head, ou, no melhor caso, sendo importado diretamente no arquivo css.
+
+No HTML
+
+```HTML
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+</style>
+```
+
+No CSS
+
+```CSS
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+```
+
+Entretanto, essa forma não é tão indicada pois faz com que se leve um pouco mais de tempo para importar (pesquisar no Google a fonte) e colocar no site.
+
+Geralmente, a importação de fontes via tag `<link>` é mais utilizada.
 
 ### A Cascata
 
