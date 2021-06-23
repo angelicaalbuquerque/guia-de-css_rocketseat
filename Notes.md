@@ -162,7 +162,38 @@ Geralmente, a importação de fontes via tag `<link>` é mais utilizada.
 
 ### A Cascata
 
+Baseia-se na escolha do browser de qual regra ele aplicará; caso existam muitas regras para o mesmo elemento.
+
+O estilo é lido de cima para baixo, sendo a base da cascata, o último estilo, o mais recente a ser aplicado.
+
+No exemplo abaixo, o elemento `h1` ficaria com cor vermelha e não azul, mas manteria o font-size de 12px:
+
+```css
+h1 {
+  color: red;
+  font-size: 12px;
+}
+
+h1 {
+  color: blue;
+}
+```
+
+A leitura leva em consideração 3 fatores:
+
+1. Origem do estilo;
+2. Especificidade;
+3. Importância.
+
+#### Origem do estilos
+
+inline > tag style > tag link.
+
+A força da cascata influencia na escolha de qual "origem" será utilizada para fazer as alterações no CSS.
+
 ### Especificidade
+
+É um cálculo matemático, onde, cada tipo de seletor e origem do estilo possem valores a serem considerados.
 
 ### Regra important
 
