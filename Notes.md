@@ -193,7 +193,137 @@ A força da cascata influencia na escolha de qual "origem" será utilizada para 
 
 ### Especificidade
 
-É um cálculo matemático, onde, cada tipo de seletor e origem do estilo possem valores a serem considerados.
+É um cálculo matemático, onde cada tipo de seletor e origem do estilo possuem valores (forças) a serem considerados.
+
+- 0. Universal selector, combinators e negation pseudo-class (:not())
+- 1. Element type selector e pseud-elements (::before, ::after)
+- 10. Classes e attribute selectors ([type="radio"])
+- 100. ID selector
+- 1000. Inline
+
+Por exemplo, mesmo que eu tenha universal selector setando a cor de um element type selector `h1` para `green`, como 1 > 0, a cor do `h1` neste caso será `blue`:
+
+```css
+h1 {
+  color: blue;
+}
+
+* {
+  color: green;
+}
+```
+
+Se eu coloco então uma classe `.title` no meu HTML e aplico no CSS, logo entende-se que 10 > 1 e então o estilo `.title` (color: red) será aplicado, mesmo que esteja acima do type selector e universal selector:
+
+```html
+<h1 class="title" id="my-title">Título</h1>
+```
+
+```css
+.title {
+  color: red;
+}
+
+h1 {
+  color: blue;
+}
+
+* {
+  color: green;
+}
+```
+
+Agora, se eu aplico no CSS o `id` de `#my-title`, ele que será o de maior força sobre class > type selector > universal selector e será aplicada a cor cinza:
+
+```css
+.my-title {
+  color: gray;
+}
+
+.title {
+  color: red;
+}
+
+h1 {
+  color: blue;
+}
+
+* {
+  color: green;
+}
+```
+
+Agora, por mais que eu tenha um ID aplicado no HTML/CSS, se eu insiro o estilo por `inline`, ele que terá o mais peso, conforme antes visto, e será aplicado a cor rosa:
+
+```html
+<h1 class="title" id="my-title" style="color: pink">Título</h1>
+```
+
+```css
+.my-title {
+  color: gray;
+}
+
+.title {
+  color: red;
+}
+
+h1 {
+  color: blue;
+}
+
+* {
+  color: green;
+}
+```
+
+Observação: pra eu conseguir sobrescrever, por exemplo, um ID de 100, eu teria que ter pelo menos 10 classes ou fazer uma junção, como `h1.title#my-title` (h1 vale 1; .title vale 10 e #my-title vale 100 = força 111).
+
+```css
+.my-title {
+  color: gray;
+}
+
+.title {
+  color: red;
+}
+
+h1.title#my-title {
+  color: blue;
+}
+
+* {
+  color: green;
+}
+```
+
+Para eu buscar em profundidade, como, por exemplo, aplicar a cor cinza dentro da tag strong para a palavra "Principal", devo separar por vírgulas para que eu possa colocar mais de uma regra por conjunto de propriedades e valores.
+
+Exemplo:
+
+```html
+<h1 class="title" id="my-title">Título <strong>Principal</strong></h1>
+```
+
+```css
+/* este estilo que será aplicado ao título completo */
+.my-title,
+#my-title strong {
+  color: gray;
+}
+
+.title {
+  color: red;
+}
+
+body h1 {
+  color: blue;
+}
+
+* {
+  color: green;
+}
+```
 
 ### Regra important
 
