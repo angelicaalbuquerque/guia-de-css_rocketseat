@@ -325,7 +325,32 @@ body h1 {
 }
 ```
 
-### Regra important
+### Regra !important
+
+Devemos evitar o uso da regra `!important`, pois não é considerado uma boa prática por quebrar o fluxo natural da cascata.
+
+Por exemplo, no caso abaixo, o estilo mais fraco de todos, o elemento h1, seria o aplicado, passando à frente dos mais fortes apenas por ter a regra `!important`.
+
+Não importa, inclusive, se escrever o estilo inline. Uma vez aplicado o `!important`, ele que irá sobrescrever todas as regras possíveis de força.
+
+```css
+.my-title,
+#my-title strong {
+  color: gray;
+}
+
+.title {
+  color: red;
+}
+
+h1 {
+  color: blue !important;
+}
+
+* {
+  color: green;
+}
+```
 
 ### At rules
 
