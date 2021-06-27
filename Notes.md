@@ -352,7 +352,32 @@ h1 {
 }
 ```
 
-### At rules
+### At-rules
+
+Relacionado com o comportamento do CSS, as _at-rules_ começam como sinal de `@`, seguido do identificador e valor.
+
+Exemplos comuns:
+
+- `@import`: Incluir um CSS externo;
+- `@media`: Regras condicionais para dispositivos;
+- `@font-face`: Fontes externas;
+- `@keyframes`: Animações.
+
+```CSS
+@import url("http://local.com/style.css");
+
+@media (min-width: 500px) {
+  /* rules here */
+}
+
+@font-face {
+  /* rules here */
+}
+
+#keyframes nameOfAnimation {
+  /* rules here */
+}
+```
 
 ### Shorthand
 
