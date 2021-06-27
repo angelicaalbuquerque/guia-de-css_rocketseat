@@ -381,6 +381,46 @@ Exemplos comuns:
 
 ### Shorthand
 
+É uma junção de propriedades. É uma de colocar diversas propriedades do CSS de uma maneira mais resumida e legível.
+
+Por exemplo:
+
+```CSS
+/* background properties */
+{
+  background-color: #000;
+  background-image: url('images/bg.gif');
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  /* background shorthand */
+  background: #000 url('images/bg.gif') no-repeat left top;
+
+
+  /* font properties */
+  font-style: italic;
+  font-weight: bold;
+  font-size: .8em;
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+
+  /* font shorthard */
+  font: italic bold .8em/1.2 Arial, sans-serif;
+}
+```
+
+Detalhes:
+
+O shorthand não vai considerar propriedades anteriores, irá sobrescrever toda linha anterior (das declarações de properties separadas, nos exemplos acima).
+
+Os valores que não forem especificados irão assumir valor padrão.
+
+E, geralmente, a ordem descrita não importa, mas se houver muitas propriedades com valores parecidos, poderemos encontrar problemas.
+
+**Propriedades que aceitam shorthand:**
+
+- animation; background; border; border-bottom; border-color; border-left; border-radius; border-right; border-style; border-top; border-width; column-rule; columns; flex; flex-row; flex-flow; font; grid; grid-area; grid-column; grid-row; grid-template; list-style; margin; offset; outline; overflow; padding; place-content; place-items; place-self; text-decoration; transition... Ler mais [aqui](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Shorthand_properties).
+
 ### Funções
 
 ### DevTools
