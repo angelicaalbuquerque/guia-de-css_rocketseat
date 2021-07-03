@@ -423,6 +423,25 @@ E, geralmente, a ordem descrita não importa, mas se houver muitas propriedades 
 
 ### Funções
 
+É um tipo de valor que existe em CSS.
+
+O nome da função é seguido de abre e fecha parenteses, onde recebe valores, que são chamados de argumentos.
+
+Exemplos:
+
+```css
+@import url("http://urlaqui.com/style.css");
+
+ {
+  color: rgb(255, 0, 100);
+  width: calc(100% - 10px);
+}
+```
+
+Funções, então, são como caixas que vão receber valores, processá-los e retorná-los.
+
+Nos casos acima, a URL "http://urlaqui.com/style.css" vai ser retornada como URL. os valores "255, 0, 100" vão ser retornados como RGB e os valores "100% - 10px" vão ser calculados e retornados.
+
 ### DevTools
 
 ### Cuidados com a escrita
