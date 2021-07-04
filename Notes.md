@@ -457,3 +457,27 @@ p {
 ```
 
 ### Vendor prefixes
+
+Permitem que os browsers adicionem funcionalidades novas que têm no CSS de forma bem específica, já que nem todas as _features_ conseguem ser inseridas de uma vez.
+
+Para ver essas novidades, adicionamos algumas palavras-chaves baseadas em seus browsers. Por exemplo:
+
+```css
+p {
+  /* Chrome, Safari, iOS e Android */
+  -webkit-background-clip: text;
+  /* Mozilla */
+  -moz-background-clip: text;
+  /* IE */
+  -ms-background-clip: text;
+  /* Opera */
+  -o-background-clip: text;
+}
+```
+
+As consultas, para saber se os prefixos vão funcionar e quais versões têm suporte, podem ser feitas em dois sites:
+
+- [Can I Use?](https://caniuse.com/)
+- [Which Vendor Prefix?](http://ireade.github.io/which-vendor-prefix/)
+
+Assim, podemos saber como fazer nosso estilo se adaptar melhor aos navegadores, até que haja um suporte completo.
