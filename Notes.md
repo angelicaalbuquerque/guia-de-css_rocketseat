@@ -442,8 +442,18 @@ Funções, então, são como caixas que vão receber valores, processá-los e re
 
 Nos casos acima, a URL "http://urlaqui.com/style.css" vai ser retornada como URL. os valores "255, 0, 100" vão ser retornados como RGB e os valores "100% - 10px" vão ser calculados e retornados.
 
-### DevTools
-
 ### Cuidados com a escrita
+
+Temos que ter cuidado com a formatação do texto, para que os estilos sejam aplicados direitinho. :)
+
+No caso abaixo, "0auto" é um valor que não existe. Existe 0 e exite _auto_. Mas, grudados, não formam nada. E não existe espaçamento em "padding -left".
+
+```css
+p {
+  /* jeito errado */
+  margin: 0auto;
+  padding -left: 15px;
+}
+```
 
 ### Vendor prefixes
