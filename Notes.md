@@ -85,7 +85,7 @@ O CSS trabalha com um conceito de caixas, que são os box models.
 
 Toda caixa tem seus limites, com altura e largura. Toda caixa tem um conteúdo e espaços dentro dela, e espaços entre elas.
 
-Quase tudo no são caixas no CSS. Posicionamento, tamanhos, espaçamentos, bordas, cores... Caixas podem ficar ao lado uma da outra, acima, abaixo...
+Quase tudo são caixas no CSS. Posicionamento, tamanhos, espaçamentos, bordas, cores... Caixas podem ficar ao lado uma da outra, acima, abaixo...
 
 Elementos HTML são caixas. É como se observasse cada um dos elementos do HTML e a comunicação com CSS fosse feita em caixas.
 
@@ -166,7 +166,7 @@ Baseia-se na escolha do browser de qual regra ele aplicará; caso existam muitas
 
 O estilo é lido de cima para baixo, sendo a base da cascata, o último estilo, o mais recente a ser aplicado.
 
-No exemplo abaixo, o elemento `h1` ficaria com cor vermelha e não azul, mas manteria o font-size de 12px:
+No exemplo abaixo, o elemento `h1` ficaria com cor azul e não vermelha, mas manteria o font-size de 12px:
 
 ```css
 h1 {
